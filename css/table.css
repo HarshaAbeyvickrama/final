@@ -1,0 +1,180 @@
+
+
+	.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 260px;
+  background-color: #555;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 80%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+	.button {
+	display: inline-block;
+	padding: 6px 12px;
+	font-size: 14px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: rgba(255,255,255,1);
+	background-color: rgba(255,255,255,0);
+	border: none;
+	
+	border-radius: 15px;
+	
+	}
+
+	.button:hover {background-color: rgba(255,255,255,0.3)}
+
+	.button:active {
+	background-color: rgba(255,255,255,0.3);
+	box-shadow: 0 5px #FFF;
+	transform: translateY(4px);
+	}
+	
+	input[type="text"]::placeholder{
+	
+		color: white;
+	}
+
+
+	h1{
+	font-size: 30px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 15px;
+	}
+	
+	table{
+	width:100%;
+	table-layout: fixed;
+	}
+	.tbl-header{
+	background-color: rgba(255,255,255,0.3);
+	}
+	.tbl-content{
+	height:300px;
+	overflow-x:auto;
+	margin-top: 0px;
+	border: 1px solid rgba(255,255,255,0.3);
+	}
+	th{
+	padding: 20px 15px;
+	text-align: left;
+	font-weight: 500;
+	font-size: 12px;
+	color: #fff;
+	text-transform: uppercase;
+	}
+	td{
+	padding: 15px;
+	text-align: left;
+	vertical-align:middle;
+	font-weight: 300;
+	font-size: 12px;
+	color: #fff;
+	border-bottom: solid 1px rgba(255,255,255,0.1);
+	}
+
+
+	/* demo styles */
+
+	@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+	body{
+	background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+	background: linear-gradient(to right, #25c481, #25b7c4);
+	font-family: 'Roboto', sans-serif;
+	}
+	section{
+	margin: 50px;
+	}
+
+
+	/* follow me template */
+	.made-with-love {
+	margin-top: 40px;
+	padding: 10px;
+	clear: left;
+	text-align: center;
+	font-size: 10px;
+	font-family: arial;
+	color: #fff;
+	}
+	.made-with-love i {
+	font-style: normal;
+	color: #F50057;
+	font-size: 14px;
+	position: relative;
+	top: 2px;
+	}
+	.made-with-love a {
+	color: #fff;
+	text-decoration: none;
+	}
+	.made-with-love a:hover {
+	text-decoration: underline;
+	}
+
+
+	/* for custom scrollbar for webkit browser*/
+
+	::-webkit-scrollbar {
+		width: 6px;
+	} 
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+	} 
+	::-webkit-scrollbar-thumb {
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+	}
+
