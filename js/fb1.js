@@ -21,7 +21,7 @@ const db=firebase.firestore();
 
 function renderComments(dat){
     var list= document.getElementById("comment-table");
-    var CommentArray=dat;
+    var CommentArray=dat.result;
     for(var i=0;i<CommentArray.items.length;i++){
         
         var len = CommentArray.items.length;
@@ -46,4 +46,4 @@ function renderComments(dat){
 }
 console.log("Running get...");
 console.log("Done & Dusted !!!!!!!!!");
-console.log("Updated 12");
+console.log("Updated 13");
