@@ -94,7 +94,7 @@ function getCommentsForVideo(videoId) {
              dat=response.result.items;
               // Handle the results here (response.result has the parsed body).
               console.log("Response", dat);
-              console.log("Response", dat.lenght);
+              console.log("Response", dat.length);
               if(dat==null){
                 console.log("error......")
               }
@@ -113,4 +113,4 @@ gapi.load("client:auth2", function() {
   function s(){
     channelDetails("UCNIPltykIATy0PhRp82uNMQ");
   }
-console.log("YTV3 update 7"); 
+console.log("YTV3 update 8"); 

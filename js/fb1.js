@@ -21,16 +21,16 @@ const db=firebase.firestore();
 
 function renderComments(dat){
     var list= document.getElementById("comment-table");
-    var CommentArray=dat.result;
-    for(var i=0;i<CommentArray.items.length;i++){
+    var CommentArray=dat;
+    for(var i=0;i<CommentArray.length;i++){
         
-        var len = CommentArray.items.length;
-        var comm=CommentArray.items[i].snippet.topLevelComment.snippet.textDisplay;
-        var authorName=CommentArray.items[i].snippet.topLevelComment.snippet.authorDisplayName;
-        var authorImageUrl=CommentArray.items[i].snippet.topLevelComment.snippet.authorProfileImageUrl;
-        var authorChannelUrl=CommentArray.items[i].snippet.topLevelComment.snippet.authorChannelUrl;
-        var authorChannelId=CommentArray.items[i].snippet.topLevelComment.snippet.authorChannelId.value;
-        var publishedDate=CommentArray.items[i].snippet.topLevelComment.snippet.publishedAt;
+        var len = CommentArray.length;
+        var comm=CommentArray[i].snippet.topLevelComment.snippet.textDisplay;
+        var authorName=CommentArray[i].snippet.topLevelComment.snippet.authorDisplayName;
+        var authorImageUrl=CommentArray[i].snippet.topLevelComment.snippet.authorProfileImageUrl;
+        var authorChannelUrl=CommentArray[i].snippet.topLevelComment.snippet.authorChannelUrl;
+        var authorChannelId=CommentArray[i].snippet.topLevelComment.snippet.authorChannelId.value;
+        var publishedDate=CommentArray[i].snippet.topLevelComment.snippet.publishedAt;
 
         console.log(comm);
         console.log("Name ",authorName);
@@ -46,4 +46,4 @@ function renderComments(dat){
 }
 console.log("Running get...");
 console.log("Done & Dusted !!!!!!!!!");
-console.log("Updated 13");
+console.log("Updated 14");
