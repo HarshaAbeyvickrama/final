@@ -87,14 +87,14 @@ function getCommentsForVideo(videoId) {
     "part": [
       "snippet"
     ],
-    "maxResults": 100,
+    "maxResults":10,
     "videoId": videoId
   })
       .then(function(response) {
               dat=response.result;
               // Handle the results here (response.result has the parsed body).
-              console.log("Response", dat);
-              renderComments(dat);
+              //console.log("Response", dat);
+              renderComments("printing dat",dat);
             },
             function(err) { console.error("Execute error", err); });
                     
@@ -108,4 +108,4 @@ gapi.load("client:auth2", function() {
   function s(){
     channelDetails("UCNIPltykIATy0PhRp82uNMQ");
   }
-console.log("YTV3 update 2"); 
+console.log("YTV3 update 3"); 
