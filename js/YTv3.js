@@ -1,5 +1,5 @@
-var clientId="231022246029-rd1p8o31a0e799i2l1gpugqvo6o4l6ic.apps.googleusercontent.com";
-var apiKey="AIzaSyD_Ivx0_pKivCmsiZsseleSF9JymWkX5q0";
+var clientId="462660440175-aqtd627pof9m837mb3a4mghbfrspmei4.apps.googleusercontent.com";
+var apiKey="AIzaSyBpDKDJGJuC5Xo4-R3z-D_FJ1iNdhZ-HVQ";
 
 function authenticate() {
   return gapi.auth2.getAuthInstance()
@@ -108,4 +108,4 @@ gapi.load("client:auth2", function() {
   function s(){
     channelDetails("UCNIPltykIATy0PhRp82uNMQ");
   }
-console.log("YTV3 update 1"); 
+console.log("YTV3 update 2"); 
