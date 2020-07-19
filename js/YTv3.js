@@ -82,7 +82,7 @@ function channelDetails(cId) {
 //===========================Get Comments for a video by Id============================================
 
 function getCommentsForVideo(videoId) {
-  var arr=[];
+  var arr=[50];
   gapi.client.youtube.commentThreads.list({
     "part": [
       "snippet"
@@ -93,11 +93,11 @@ function getCommentsForVideo(videoId) {
       .then(function(response) {
              dat=response.result.items;
              
-             for(var i=0;i<CommentArray.length;i++){
+             for(var i=0;i<dat.length;i++){
         
-              var len = CommentArray.length;
-              var comm=CommentArray[i].snippet.topLevelComment.snippet.textDisplay;
-              var authorName=CommentArray[i].snippet.topLevelComment.snippet.authorDisplayName;
+              
+              var comm=dat[i].snippet.topLevelComment.snippet.textDisplay;
+              var authorName=dat[i].snippet.topLevelComment.snippet.authorDisplayName;
               // var authorImageUrl=CommentArray[i].snippet.topLevelComment.snippet.authorProfileImageUrl;
               // var authorChannelUrl=CommentArray[i].snippet.topLevelComment.snippet.authorChannelUrl;
               // var authorChannelId=CommentArray[i].snippet.topLevelComment.snippet.authorChannelId.value;
@@ -132,7 +132,7 @@ gapi.load("client:auth2", function() {
   function s(){
     channelDetails("UCNIPltykIATy0PhRp82uNMQ");
   }
-console.log("YTV3 update 11"); 
+console.log("YTV3 update 12"); 
 
 function CommentObj(com,name){
   this.com=com;
