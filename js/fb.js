@@ -196,7 +196,7 @@ function renderComments(commentsData){
         var publishedDate=commentsData[i].snippet.topLevelComment.snippet.publishedAt;
 
         console.log(comm);
-        console.log(authorName);
+        console.log("Name ",authorName);
 
         var listRow=`<tr>
         <td>${i+1}</td>
@@ -214,5 +214,5 @@ function get(){
     })
 }
 console.log("Running get...");
-console.log("Done and Dusted");
+console.log("Done & Dusted");
 get();

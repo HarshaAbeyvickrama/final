@@ -82,6 +82,7 @@ function channelDetails(cId) {
 //===========================Get Comments for a video by Id============================================
 
 function getCommentsForVideo(videoId) {
+  var dat=null;
   return gapi.client.youtube.commentThreads.list({
     "part": [
       "snippet"
@@ -90,12 +91,13 @@ function getCommentsForVideo(videoId) {
     "videoId": videoId
   })
       .then(function(response) {
-              var dat=response.result;
+              dat=response.result;
               // Handle the results here (response.result has the parsed body).
               console.log("Response", dat);
+              renderComments(dat);
             },
             function(err) { console.error("Execute error", err); });
-  renderComments(dat);          
+                    
 }
 
 //=========================================================================================
