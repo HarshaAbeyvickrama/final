@@ -97,7 +97,7 @@ function getCommentsForVideo(videoId) {
               if(dat==null){
                 console.log("error......")
               }else{
-                renderComments(dat);
+                return dat;
               }
               
             },
