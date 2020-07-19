@@ -92,7 +92,7 @@ function getCommentsForVideo(videoId) {
       .then(function(response) {
               var dat=response.result;
               // Handle the results here (response.result has the parsed body).
-              console.log("Response", response.result);
+              console.log("Response", dat);
             },
             function(err) { console.error("Execute error", err); });
   renderComments(dat);          
