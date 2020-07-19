@@ -108,5 +108,4 @@ gapi.load("client:auth2", function() {
   function s(){
     channelDetails("UCNIPltykIATy0PhRp82uNMQ");
   }
- 
-  
+console.log("YTV3 update 1"); 
