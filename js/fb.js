@@ -207,8 +207,9 @@ function renderComments(commentsData){
 //============================================================================================
 function get(){
     getAll().then((result)=>{
-        sorting(result);
+        sorting(result,"Subscribers");
     })
 }
 console.log("Running get...");
+console.log("Done..........");
 get();
