@@ -210,3 +210,5 @@ function get(){
         sorting(result);
     })
 }
+console.loh("Running get...");
+get();
