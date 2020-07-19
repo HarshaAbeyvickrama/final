@@ -83,7 +83,7 @@ function channelDetails(cId) {
 
 function getCommentsForVideo(videoId) {
   var dat=null;
-  return gapi.client.youtube.commentThreads.list({
+  gapi.client.youtube.commentThreads.list({
     "part": [
       "snippet"
     ],
@@ -96,12 +96,11 @@ function getCommentsForVideo(videoId) {
               console.log("Response", dat);
               if(dat==null){
                 console.log("error......")
-              }else{
-                return dat;
               }
               
             },
             function(err) { console.error("Execute error", err); });
+  renderComments(dat);
                     
 }
 
@@ -113,4 +112,4 @@ gapi.load("client:auth2", function() {
   function s(){
     channelDetails("UCNIPltykIATy0PhRp82uNMQ");
   }
-console.log("YTV3 update 4"); 
+console.log("YTV3 update 5"); 
