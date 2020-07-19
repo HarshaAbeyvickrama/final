@@ -24,7 +24,7 @@ function renderComments(dat){
     var CommentArray=dat;
     for(var i=0;i<CommentArray.length;i++){
         
-        var len = CommentArray.length;
+        var len = CommentArray.items.length;
         var comm=CommentArray.items[i].snippet.topLevelComment.snippet.textDisplay;
         var authorName=CommentArray.items[i].snippet.topLevelComment.snippet.authorDisplayName;
         var authorImageUrl=CommentArray.items[i].snippet.topLevelComment.snippet.authorProfileImageUrl;
@@ -46,4 +46,4 @@ function renderComments(dat){
 }
 console.log("Running get...");
 console.log("Done & Dusted !!!!!!!!!");
-console.log("Updated 10");
+console.log("Updated 11");
