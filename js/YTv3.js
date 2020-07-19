@@ -4,7 +4,7 @@ var apiKey="AIzaSyD_Ivx0_pKivCmsiZsseleSF9JymWkX5q0";
 function authenticate() {
   return gapi.auth2.getAuthInstance()
       .signIn({scope: "https://www.googleapis.com/auth/youtube.force-ssl"})
-      .then(function() { console.log("Sign-in successful"); },
+      .then(function() { console.log("Sign-in successful with force ssl"); },
             function(err) { console.error("Error signing in", err); });
 }
 function loadClient() {
