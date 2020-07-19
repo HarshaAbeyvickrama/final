@@ -92,16 +92,33 @@ function getCommentsForVideo(videoId) {
   })
       .then(function(response) {
              dat=response.result.items;
+             var arr=[dat.length];
+             for(var i=0;i<CommentArray.length;i++){
+        
+              var len = CommentArray.length;
+              var comm=CommentArray[i].snippet.topLevelComment.snippet.textDisplay;
+              var authorName=CommentArray[i].snippet.topLevelComment.snippet.authorDisplayName;
+              var authorImageUrl=CommentArray[i].snippet.topLevelComment.snippet.authorProfileImageUrl;
+              var authorChannelUrl=CommentArray[i].snippet.topLevelComment.snippet.authorChannelUrl;
+              var authorChannelId=CommentArray[i].snippet.topLevelComment.snippet.authorChannelId.value;
+              var publishedDate=CommentArray[i].snippet.topLevelComment.snippet.publishedAt;
+
+              arr[i]=new CommentObj(comm,authorName);
+             }
+
+
+
+
               // Handle the results here (response.result has the parsed body).
-              console.log("Response", dat);
-              console.log("Response", dat.length);
+              console.log("Response", arr);
+              console.log("Response", arr.length);
               if(dat==null){
                 console.log("error......")
               }
               
             },
             function(err) { console.error("Execute error", err); });
-  renderComments(...dat);
+  renderComments(arr);
                     
 }
 
@@ -113,4 +130,9 @@ gapi.load("client:auth2", function() {
   function s(){
     channelDetails("UCNIPltykIATy0PhRp82uNMQ");
   }
-console.log("YTV3 update 9"); 
+console.log("YTV3 update 10"); 
+
+function CommentObj(com,name){
+  this.com=com;
+  this.name=name;
+}

@@ -25,15 +25,11 @@ function renderComments(dat){
     for(var i=0;i<CommentArray.length;i++){
         
         var len = CommentArray.length;
-        var comm=CommentArray[i].snippet.topLevelComment.snippet.textDisplay;
-        var authorName=CommentArray[i].snippet.topLevelComment.snippet.authorDisplayName;
-        var authorImageUrl=CommentArray[i].snippet.topLevelComment.snippet.authorProfileImageUrl;
-        var authorChannelUrl=CommentArray[i].snippet.topLevelComment.snippet.authorChannelUrl;
-        var authorChannelId=CommentArray[i].snippet.topLevelComment.snippet.authorChannelId.value;
-        var publishedDate=CommentArray[i].snippet.topLevelComment.snippet.publishedAt;
-
+        var comm=CommentArray[i].com;
+        var authorName=CommentArray[i].name;
+       
         console.log(comm);
-        console.log("Name ",authorName);
+        console.log("Name ",name);
 
         var listRow=`<tr>
         <td>${i+1}</td>
@@ -46,4 +42,4 @@ function renderComments(dat){
 }
 console.log("Running get...");
 console.log("Done & Dusted !!!!!!!!!");
-console.log("Updated 14");
+console.log("Updated 16");
