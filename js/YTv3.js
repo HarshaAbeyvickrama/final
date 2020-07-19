@@ -101,7 +101,7 @@ function getCommentsForVideo(videoId) {
               
             },
             function(err) { console.error("Execute error", err); });
-  renderComments(dat);
+  renderComments(...dat);
                     
 }
 
@@ -113,4 +113,4 @@ gapi.load("client:auth2", function() {
   function s(){
     channelDetails("UCNIPltykIATy0PhRp82uNMQ");
   }
-console.log("YTV3 update 8"); 
+console.log("YTV3 update 9"); 
