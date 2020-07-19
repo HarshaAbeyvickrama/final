@@ -30,6 +30,9 @@ function sortingViewCount(collectionArray){
 }
 
 function btn(){
-    authenticate().then(loadClient().then(getCommentsForVideo("uuF45i8bOF0")));
+    authenticate().then(()=>{
+        loadClient().then(()=>{
+            getCommentsForVideo("uuF45i8bOF0");
+        })
+    })
 }
-btn();

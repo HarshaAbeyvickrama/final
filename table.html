@@ -6,7 +6,7 @@
 
 Youtube Mate
 </title>
-<script src="https://apis.google.com/js/api.js"></script>	
+<script src="https://apis.google.com/js/api.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -28,10 +28,10 @@ Youtube Mate
 <script>
 
 // '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
-	$(window).on("load resize ", function() {
+	/*$(window).on("load resize ", function() {
 	var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
 	$('.tbl-header').css({'padding-right':scrollWidth});
-	}).resize();
+	}).resize();*/
 
 </script>
 
@@ -69,7 +69,8 @@ Youtube Mate
   </div>
 </section>
 
-<button onclick="authenticate().then(loadClient().then(ge))">authorize and load</button>
+<button onclick="authenticate().then(loadClient)">authorize and load</button>
+<button onclick="btn()"></button>
 
 <!-- follow me template -->
 <!--<div class="made-with-love">
