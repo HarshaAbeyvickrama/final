@@ -83,7 +83,7 @@ function channelDetails(cId) {
 
 function getCommentsForVideo(videoId) {
   var arr=[50];
-  gapi.client.youtube.commentThreads.list({
+  return gapi.client.youtube.commentThreads.list({
     "part": [
       "snippet"
     ],
@@ -114,13 +114,11 @@ function getCommentsForVideo(videoId) {
               // Handle the results here (response.result has the parsed body).
               console.log("Response", arr);
               console.log("Response", arr.length);
-              if(dat==null){
-                console.log("error......")
-              }
+              renderComments(arr);
               
             },
             function(err) { console.error("Execute error", err); });
-  renderComments(arr);
+  
                     
 }
 
@@ -132,7 +130,7 @@ gapi.load("client:auth2", function() {
   function s(){
     channelDetails("UCNIPltykIATy0PhRp82uNMQ");
   }
-console.log("YTV3 update 12"); 
+console.log("YTV3 update 13"); 
 
 function CommentObj(com,name){
   this.com=com;
