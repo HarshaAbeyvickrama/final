@@ -94,7 +94,12 @@ function getCommentsForVideo(videoId) {
              dat=response.result;
               // Handle the results here (response.result has the parsed body).
               console.log("Response", dat);
-              renderComments(dat);
+              if(dat==null){
+                console.log("error......")
+              }else{
+                renderComments(dat);
+              }
+              
             },
             function(err) { console.error("Execute error", err); });
                     

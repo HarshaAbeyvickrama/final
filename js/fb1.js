@@ -156,44 +156,21 @@ function sorting(collectionArray,val){
 }
 //============================================render data to Channel Table================================
 
-function renderTable(data){
-    var table= document.getElementById("table-data");
-    for(var i=0;i<data.length;i++){
-        // var subVal;
-        // var sub=parseFloat(data[i].data().Subscribers);
-        // if(sub<1000){
-        //     subVal=sub;
-        // }else if(sub<1000000){
-        //     subVal=sub/1000;
-        // }else if(sub>1000000){
-        //     subVal=sub/1000;
-        // }
-        var row=`<tr>
-        <td>${i+1}</td>
-        <td>${data[i].data().Name}</td>
-        <td>${data[i].data().Subscribers}</td>
-        <td>${data[i].data().ViewCount}</td>
-        <td>${data[i].data().VideoCount}</td>
-        <td ><button type="button" class="btn btn-link float-right badge-pill" >View</button></td>
-      </tr>`
-        table.innerHTML+=row;
-    }
-
-}
 
 //=========================render Comments======================================================
 
-function renderComments(commentsData){
+function renderComments(CommentsData){
     var list= document.getElementById("comment-table");
-    for(var i=0;i<commentsData.length;i++){
-        var commentsData=commentsData;
-        var len = commentsData.length;
-        var comm=commentsData.items[i].snippet.topLevelComment.snippet.textDisplay;
-        var authorName=commentsData.items[i].snippet.topLevelComment.snippet.authorDisplayName;
-        var authorImageUrl=commentsData.items[i].snippet.topLevelComment.snippet.authorProfileImageUrl;
-        var authorChannelUrl=commentsData.items[i].snippet.topLevelComment.snippet.authorChannelUrl;
-        var authorChannelId=commentsData.items[i].snippet.topLevelComment.snippet.authorChannelId.value;
-        var publishedDate=commentsData.items[i].snippet.topLevelComment.snippet.publishedAt;
+    var CommentArray=CommentsData;
+    for(var i=0;i<CommentArray.length;i++){
+        
+        var len = CommentArray.length;
+        var comm=CommentArray.items[i].snippet.topLevelComment.snippet.textDisplay;
+        var authorName=CommentArray.items[i].snippet.topLevelComment.snippet.authorDisplayName;
+        var authorImageUrl=CommentArray.items[i].snippet.topLevelComment.snippet.authorProfileImageUrl;
+        var authorChannelUrl=CommentArray.items[i].snippet.topLevelComment.snippet.authorChannelUrl;
+        var authorChannelId=CommentArray.items[i].snippet.topLevelComment.snippet.authorChannelId.value;
+        var publishedDate=CommentArray.items[i].snippet.topLevelComment.snippet.publishedAt;
 
         console.log(comm);
         console.log("Name ",authorName);
@@ -214,5 +191,6 @@ function get(){
     })
 }
 console.log("Running get...");
-console.log("Done & Dusted!!!!!!!!");
+console.log("Done & Dusted !!!!!!!!!");
+console.log("Updated");
 get();
