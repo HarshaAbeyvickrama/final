@@ -32,6 +32,7 @@ function sortingViewCount(collectionArray){
 function btn(){
     authenticate().then(()=>{
         loadClient().then(()=>{
+            console.log("getting comments")
             getCommentsForVideo("uuF45i8bOF0");
         })
     })

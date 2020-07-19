@@ -188,12 +188,12 @@ function renderComments(commentsData){
     for(var i=0;i<commentsData.length;i++){
         var commentsData=commentsData;
         var len = commentsData.length;
-        var comm=commentsData[i].snippet.topLevelComment.snippet.textDisplay;
-        var authorName=commentsData[i].snippet.topLevelComment.snippet.authorDisplayName;
-        var authorImageUrl=commentsData[i].snippet.topLevelComment.snippet.authorProfileImageUrl;
-        var authorChannelUrl=commentsData[i].snippet.topLevelComment.snippet.authorChannelUrl;
-        var authorChannelId=commentsData[i].snippet.topLevelComment.snippet.authorChannelId.value;
-        var publishedDate=commentsData[i].snippet.topLevelComment.snippet.publishedAt;
+        var comm=commentsData.items[i].snippet.topLevelComment.snippet.textDisplay;
+        var authorName=commentsData.items[i].snippet.topLevelComment.snippet.authorDisplayName;
+        var authorImageUrl=commentsData.items[i].snippet.topLevelComment.snippet.authorProfileImageUrl;
+        var authorChannelUrl=commentsData.items[i].snippet.topLevelComment.snippet.authorChannelUrl;
+        var authorChannelId=commentsData.items[i].snippet.topLevelComment.snippet.authorChannelId.value;
+        var publishedDate=commentsData.items[i].snippet.topLevelComment.snippet.publishedAt;
 
         console.log(comm);
         console.log("Name ",authorName);
@@ -214,5 +214,5 @@ function get(){
     })
 }
 console.log("Running get...");
-console.log("Done & Dusted");
+console.log("Done & Dusted !!!!!!!!!");
 get();
