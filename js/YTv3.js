@@ -82,7 +82,7 @@ function channelDetails(cId) {
 //===========================Get Comments for a video by Id============================================
 
 function getCommentsForVideo(videoId) {
-  var dat=null;
+  var arr=[];
   gapi.client.youtube.commentThreads.list({
     "part": [
       "snippet"
@@ -92,18 +92,20 @@ function getCommentsForVideo(videoId) {
   })
       .then(function(response) {
              dat=response.result.items;
-             var arr=[dat.length];
+             
              for(var i=0;i<CommentArray.length;i++){
         
               var len = CommentArray.length;
               var comm=CommentArray[i].snippet.topLevelComment.snippet.textDisplay;
               var authorName=CommentArray[i].snippet.topLevelComment.snippet.authorDisplayName;
-              var authorImageUrl=CommentArray[i].snippet.topLevelComment.snippet.authorProfileImageUrl;
-              var authorChannelUrl=CommentArray[i].snippet.topLevelComment.snippet.authorChannelUrl;
-              var authorChannelId=CommentArray[i].snippet.topLevelComment.snippet.authorChannelId.value;
-              var publishedDate=CommentArray[i].snippet.topLevelComment.snippet.publishedAt;
+              // var authorImageUrl=CommentArray[i].snippet.topLevelComment.snippet.authorProfileImageUrl;
+              // var authorChannelUrl=CommentArray[i].snippet.topLevelComment.snippet.authorChannelUrl;
+              // var authorChannelId=CommentArray[i].snippet.topLevelComment.snippet.authorChannelId.value;
+              // var publishedDate=CommentArray[i].snippet.topLevelComment.snippet.publishedAt;
 
               arr[i]=new CommentObj(comm,authorName);
+              console.log(comm);
+              console.log(authorName)
              }
 
 
@@ -130,7 +132,7 @@ gapi.load("client:auth2", function() {
   function s(){
     channelDetails("UCNIPltykIATy0PhRp82uNMQ");
   }
-console.log("YTV3 update 10"); 
+console.log("YTV3 update 11"); 
 
 function CommentObj(com,name){
   this.com=com;

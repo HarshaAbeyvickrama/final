@@ -19,9 +19,9 @@ const db=firebase.firestore();
 
 //=========================render Comments======================================================
 
-function renderComments(dat){
+function renderComments(arr){
     var list= document.getElementById("comment-table");
-    var CommentArray=dat;
+    var CommentArray=arr;
     for(var i=0;i<CommentArray.length;i++){
         
         var len = CommentArray.length;
